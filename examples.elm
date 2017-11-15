@@ -41,3 +41,8 @@ add2 = add1 2 -- <function> : number -> number
 -- call the returned function
 add2 3 -- 6
 
+update msg state =
+  case msg of
+    Increment value -> { state | counter = counter + value }
+    Decrement value -> { state | counter = counter - value }
+

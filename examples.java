@@ -11,7 +11,7 @@
 }
 
 //"Function" with parameterized logic
-​public​ List<Integer> filtra(List<Integer> list, Predicate predicate) {
+​public​ List<Integer> filter(List<Integer> list, Predicate predicate) {
 ​  List<Integer> filteredList = ​new​ ArrayList<Integer>();
 ​ 
     ​for​ (Integer element : list) {
@@ -40,8 +40,8 @@ public​ ​interface​ Predicate {
 ​    }
 ​}
 
-filtra(Arrays.asList(1,2,3,4), new IsEven());
-filtra(Arrays.asList(1,2,3,4), new IsOdd());
+filter(Arrays.asList(1,2,3,4), new IsEven());
+filter(Arrays.asList(1,2,3,4), new IsOdd());
 
 //Java 8
 Arrays

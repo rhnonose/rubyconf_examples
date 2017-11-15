@@ -44,3 +44,14 @@ apply.(1, 2, add) # 3
 # call function with other parameters
 apply.("first_name", "last_name", &<>/2) # "first_namelast_name"
 
+%{name: name, age: age} = person = find_person(1)
+
+def get_full_name(%{first_name: first_name, last_name: last_name}) do
+  first_name <> " " <> last_name
+end
+
+case some_request() do
+  nil -> {:error, "something went wrong."}
+  result -> {:ok, result}
+end
+
